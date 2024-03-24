@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans.xsd 
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd">
+  <!-- enable component scanning  -->
+ <context:component-scan base-package="com.nt.sbeans"/>
+ <context:property-placeholder location="com/nt/commons/info.perperties"/>
+ <alias name="${courier.id}" alias="ekart"></alias>
+  
+ <!-- config dependent spring bean class object
+ <bean id="bDart" class="com.nt.comps.BlueDart"></bean>
+ <bean id="dtdc" class="com.nt.comps.DTDC"></bean>
+ config target spring bean class object
+ <bean id="fp" class="com.nt.comps.Flipkart" scope="singleton"></bean>
+ <property name="courier" ref="bDart"/> -->
+  </beans>

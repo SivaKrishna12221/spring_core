@@ -1,0 +1,34 @@
+0<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans.xsd 
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd">
+  <!--   spring bean config  enabling static factory method  instanstion -->
+    <bean id="ldt1" class="java.time.localDateTime" factory-method="now" primary="true"></bean>
+   <!--  <alias name="ldt1" alias="l1"></alias>
+    <alias name="ldt1" alias="l2"></alias>
+    </bean> -->
+  <!-- <bean id="dateTime" class="java.time.LocalDateTime" factory-method="of"></bean>
+  <constructor-arg name="year" value="2020"/>
+  <constructor-arg name="month" value="10"/>
+  <constructor-arg name="dayOfMonth" value="30"/>
+  <constructor-arg name="hour" value="11"/>
+  <constructor-arg name="minute" value="50"/>
+  <constructor-arg name="second" value="30"/>
+ <bean id="ldt1" class="java.time.LocalDateTime" factory-method="of"></bean>
+  <constructor-arg name="year" value="2020"/>
+  <constructor-arg name="month" value="10"/>
+  <constructor-arg name="dayOfMonth" value="30"/>
+  <constructor-arg name="hour" value="11"/>
+  <constructor-arg name="minute" value="50"/>
+  <constructor-arg name="second" value="30"/> -->
+ 
+  <!--  - enabling component scanning to recognize user defined @component classes as spring bean -->
+  <context:component-scan base-package="com.nt."/> 
+  
+  </beans>
+   
